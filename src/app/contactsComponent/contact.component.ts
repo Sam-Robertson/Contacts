@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { ContactsService } from '../contactsService'
 
+
 @Component({
   selector: 'contact',
   templateUrl: './contact.component.html',
@@ -25,13 +26,10 @@ export class ContactComponent implements OnInit{
 
   }
   myAdd(firstname, lastname) : any {
-    this.contactsService.getcontacts(firstname, lastname);
+    this.contactsService.addcontact(firstname, lastname);
   }
   myRemove(firstname) : any {
-    this.contactsService.removecontacts(firstname);
-  }
-  myEdit(){
-
+    this.contactsService.removecontact(firstname);
   }
 }
 
